@@ -1,0 +1,61 @@
+<DOCTYPE! html>
+<html>
+<head>
+<body>
+<h1>gaming videos</h1>
+<button><iframe width="280" height="150" src="https://www.youtube.com/embed/1h3ZvRJQphI?si=vvbpIxR8aQPpXCxH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></button>
+<br>
+<button><iframe width="280" height="150" src="https://www.youtube.com/embed/4OGTQRcOFVA?si=Gaumrk6u3IUvx8ao" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></button>
+<button><iframe width="280" height="150" src="https://www.youtube.com/embed/0Wt6UPxI98o?si=33fZbdN9DixV75zr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></button>
+<button><iframe width="280" height="150" src="https://www.youtube.com/embed/Yhyb5-JTfes?si=URNTc9a2JezMmZxT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></button>
+</body>
+</head><style>body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+button {
+    border: none;
+    padding: 0;
+    margin: 10px;
+    background-color:light green;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+iframe {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: box-shadow 0.2s;
+}
+
+button:hover iframe {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+</style><script>document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll("button");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            const iframe = button.querySelector("iframe");
+            const src = iframe.getAttribute("src");
+            iframe.setAttribute("src", src); // Reload the iframe to start the video
+        });
+    });
+});
+</script>
